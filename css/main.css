@@ -7,31 +7,18 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#636363;
+  color:#C1002A;
   margin:0 0 20px;
+  line-height:1.1;
+  font-weight: 500;
 }
 
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
 }
 
-h1, h2, h3 {
-  line-height:1.1;
-}
-
 h1 {
   font-size:28px;
-  font-weight: 500;
-}
-
-h2 {
-  color:#393939;
-  font-weight: 500;
-}
-
-h3, h4, h5, h6 {
-  color:#494949;
-  font-weight: 500;
 }
 
 a {
