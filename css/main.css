@@ -47,6 +47,10 @@ a:hover small {
   margin:0 auto;
 }
 
+.wrapper a {
+  color:#C1002A;
+}
+
 blockquote {
   border-left:1px solid #636363;
   margin:0;
