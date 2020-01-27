@@ -7,7 +7,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#C1002A;
+  
   margin:0 0 20px;
   line-height:1.1;
   font-weight: 500;
@@ -19,6 +19,7 @@ p, ul, ol, table, pre, dl {
 }
 
 h1 {
+  color:#C1002A;
   font-size:28px;
 }
 
