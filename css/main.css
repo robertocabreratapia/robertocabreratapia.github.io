@@ -6,28 +6,32 @@ body {
   font-weight:400;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  
-  margin:0 0 20px;
+h1 {
+  margin:0 0 1.5em;
   line-height:1.1;
   font-weight: 500;
   text-transform: uppercase;
 }
 
+h2, h3, h4, h5, h6 {
+  margin:0 0 .5em;
+  line-height:1.1;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+  margin:0 0 1em;
+  list-style-type: none;
+}
+section li {
+  margin: 0 0 .5em -5.5ex;
 }
 
 h1 {
   color:#C1002A;
   font-size:28px;
 }
-
-h3 {
-  font-weight: 700;
-  text-transform: none;
-}
-
 
 a {
   color:#121212;
