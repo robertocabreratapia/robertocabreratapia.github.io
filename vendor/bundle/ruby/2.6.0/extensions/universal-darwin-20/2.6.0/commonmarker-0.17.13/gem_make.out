@@ -1,5 +1,5 @@
 current directory: /Users/regina/sciebo/GitHub/reginaweber.github.io/vendor/bundle/ruby/2.6.0/gems/commonmarker-0.17.13/ext/commonmarker
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20210419-63043-v1w2wj.rb extconf.rb
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20210419-65079-ekwqhi.rb extconf.rb
 creating Makefile
 
 current directory: /Users/regina/sciebo/GitHub/reginaweber.github.io/vendor/bundle/ruby/2.6.0/gems/commonmarker-0.17.13/ext/commonmarker
@@ -59,35 +59,35 @@ ld: warning: ignoring file cmark_ctype.o, building for macOS-arm64e but attempti
 ld: warning: ignoring file blocks.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file buffer.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file core-extensions.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file commonmark.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file ext_scanners.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file commonmark.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file commonmarker.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file footnotes.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file houdini_href_e.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file houdini_html_e.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file footnotes.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file houdini_html_u.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file inlines.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file html.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file iterator.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file html.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file inlines.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file linked_list.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file latex.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file map.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file man.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file plugin.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file map.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file node.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file references.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file plaintext.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file latex.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file plugin.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file references.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file registry.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file render.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file scanners.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file strikethrough.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file syntax_extension.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file strikethrough.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file table.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file tagfilter.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file utf8.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: ignoring file xml.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
-ld: warning: ignoring file render.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
+ld: warning: ignoring file utf8.o, building for macOS-arm64e but attempting to link with file built for unknown-x86_64
 ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.2.Internal.sdk/usr/local/lib'
 
 current directory: /Users/regina/sciebo/GitHub/reginaweber.github.io/vendor/bundle/ruby/2.6.0/gems/commonmarker-0.17.13/ext/commonmarker
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 commonmarker.bundle ./.gem.20210419-63043-1gm559h/commonmarker
+/usr/bin/install -c -m 0755 commonmarker.bundle ./.gem.20210419-65079-1h3wmz9/commonmarker
