@@ -107,7 +107,7 @@ img {
 }
 
 header {
-  width:270px;
+  width:290px;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
@@ -120,20 +120,19 @@ header h1{
 
 header ul {
   list-style:none;
-  padding: 0 0 0 0;
-  margin: 0 0 0 -3ex;
+  list-style-position:inside;
+  padding: 0;
+  margin: 0;
   width:290px;
 }
 
 header li {
-  width:89px;
-  height:25px;
-  border-right:2px solid #e0e0e0;
   font-size: 110%;
   float:left;
   display:block;
-  text-align:center;
-  padding: .5em .2ex .5em .2em;
+  text-align:left;
+  padding: 0;
+  margin: 0 1.5ex 0 0;
 }
 
 header li a {
