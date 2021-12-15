@@ -1,11 +1,11 @@
 body {
   background-color: #fff;
   padding:50px;
-  font-size: 110%;
-  line-height: 1.5; 
-  font-family:  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 90%;
+  line-height: 1.4; 
+  font-family:  "Optima", "Helvetica", "Arial", sans-serif;
   color:#595959;
-  font-weight:400;
+  font-weight:300;
 }
 
 h1 {
@@ -13,6 +13,7 @@ h1 {
   color:#C1002A;
   font-size: 200%;
   font-weight: 300;
+  font-family:  "Century Gothic", "Helvetica", "Arial", sans-serif;
 
 }
 
@@ -20,9 +21,11 @@ h2, h3, h4, h5, h6 {
   margin: 1.5em 0 .5em 0;
   font-weight: 300;
   font-size: 150%;
+  font-family:  "Century Gothic", "Helvetica", "Arial", sans-serif;
 }
 
-p {margin: 0 0 1em;
+p {
+  margin: 0 0 1em;
 }
 
 ul, ol, table, pre, dl {
@@ -107,7 +110,7 @@ img {
 }
 
 header {
-  width:290px;
+  width:320px;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
@@ -115,7 +118,7 @@ header {
 
 header h1{
   text-transform: uppercase;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
 }
 
 header ul {
@@ -123,10 +126,12 @@ header ul {
   list-style-position:inside;
   padding: 0;
   margin: 0;
-  width:290px;
+  width:320px;
 }
 
 header li {
+  font-family:  "Century Gothic", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
   font-size: 110%;
   float:left;
   display:block;
@@ -181,7 +186,7 @@ hr {
 }
 
 footer {
-  width:270px;
+  width:320px;
   float:left;
   position:fixed;
   bottom:50px;
