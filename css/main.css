@@ -9,12 +9,16 @@ body {
 }
 
 h1 {
-  margin:0 0 1.5em;
+  margin: 5.25em 0 1.5em;
   color:#C1002A;
   font-size: 200%;
   font-weight: 300;
   font-family:  "Century Gothic", "Helvetica", "Arial", sans-serif;
+}
 
+
+.firstheader {
+  margin-top: 0em;
 }
 
 h2, h3, h4, h5, h6 {
@@ -109,6 +113,8 @@ img {
   max-width:100%;
 }
 
+
+ /* applies to name and main menu on the left */
 header {
   width:320px;
   float:left;
