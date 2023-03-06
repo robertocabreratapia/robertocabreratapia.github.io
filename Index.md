@@ -4,4 +4,4 @@
 
 # Roberto Cabrera Tapia
 
-DoctoraNdo en Ciencias Políticas.\
+DoctoraNdo en Ciencias Políticas.
