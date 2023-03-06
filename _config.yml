@@ -1,5 +1,6 @@
 theme: jekkyll-theme-minimal
 title: Roberto Cabrera Tapia
 description: Hola mundo.
-Font: Arial Narrow
+mainfont: Arial Narrow
+fontsize: 13 pt
 
