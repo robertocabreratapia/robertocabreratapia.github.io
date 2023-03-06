@@ -1,5 +1,5 @@
 ---
-title: "Roberto Cabrera Tapia"
+---
 ---
 
 # Roberto Cabrera Tapia
