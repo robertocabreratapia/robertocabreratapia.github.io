@@ -2,10 +2,6 @@
 title: "Roberto Cabrera Tapia"
 ---
 
-# Esta es una prueba
+# Roberto Cabrera Tapia
 
-Lo que quiero es saber como funciona
-
-## Prueba
-
-### Prueba
+DoctoraNdo en Ciencias Políticas.\
