@@ -26,11 +26,12 @@
 
       header h1 {
         margin: 0; /* Eliminar márgenes del h1 */
+        font-size: 2em; /* Tamaño de la fuente del encabezado ajustado */
       }
 
       header h1 a {
         display: block; /* Hacer que cada línea sea un bloque */
-        font-size: 2.5em; /* Ajustar el tamaño de la fuente */
+        font-size: 2em; /* Tamaño de la fuente del encabezado ajustado */
         color: #000; /* Color del texto */
         text-decoration: none; /* Sin subrayado */
       }
