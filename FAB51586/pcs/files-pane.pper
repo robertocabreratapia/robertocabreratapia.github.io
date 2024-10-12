@@ -1,8 +1,12 @@
 {
     "sortOrder": [
         {
-            "columnIndex": 2,
+            "columnIndex": 4,
             "ascending": false
+        },
+        {
+            "columnIndex": 2,
+            "ascending": true
         }
     ],
     "path": "D:/OneDrive - Universidad Complutense de Madrid (UCM)/01 Ues/WebPersonalGitHub"
