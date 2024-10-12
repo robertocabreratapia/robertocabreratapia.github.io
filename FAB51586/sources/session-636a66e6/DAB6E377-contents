@@ -3,8 +3,8 @@ layout: default
 ---
 <h1> Intereses </h1>
 <h2> Geográfico </h2>
-<li> Chile, Latinoamérica, España. </li>
+<p> Chile, Latinoamérica, España. </p>
 <h2> Académico </h2>
-<li> Ciencia Política, Política e Instituciones Comparadas, Estrategia Institucional. </li>
+<p> Ciencia Política, Política e Instituciones Comparadas, Estrategia Institucional. </p>
 <h2> Profesional </h2>
-<li> Análisis Político, Asuntos Públicos.</li>
+<p> Análisis Político, Asuntos Públicos.</p>
