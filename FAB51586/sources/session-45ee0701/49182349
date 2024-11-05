@@ -1,26 +1,26 @@
 {
-    "id": "31411BA1",
+    "id": "49182349",
     "path": "D:/OneDrive - Universidad Complutense de Madrid (UCM)/01 Ues/WebPersonalGitHub/css/main.css",
     "project_path": "css/main.css",
     "type": "css",
-    "hash": "2172470845",
+    "hash": "1819531387",
     "contents": "",
     "dirty": false,
-    "created": 1728947410135.0,
+    "created": 1730790568111.0,
     "source_on_save": false,
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "6,15",
+        "cursorPosition": "2,2",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1728947586,
+    "lastKnownWriteTime": 1730790648,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1728947586507,
+    "last_content_update": 1730790648358,
     "read_only": false,
     "read_only_alternatives": []
 }
