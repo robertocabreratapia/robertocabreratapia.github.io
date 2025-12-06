@@ -32,6 +32,10 @@ params:
     height: 50
     url: logo.png
     width: 50
+
+  # ✔ ESTA ES LA LÍNEA QUE DEBES AÑADIR
+  customCSS: ["css/custom.css"]
+
 markup:
   defaultMarkdownHandler: goldmark
   goldmark:
