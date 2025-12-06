@@ -287,3 +287,52 @@ footer {
   height: 380px;
   border-radius: 12px;
 }
+
+
+/* ====== PLAYLISTS: MODO MÓVIL ====== */
+
+@media screen and (max-width: 720px) {
+
+  /* Header fluido */
+  header {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+
+  header ul {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  header li {
+    float: none;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  /* Contenido ocupa <100%> */
+  section {
+    width: 100% !important;
+    float: none;
+    padding: 0 5%;
+  }
+
+  /* Playlists responsivas */
+  .playlistbox {
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  .playlistbox iframe {
+    height: 300px; /* tamaño mejor adaptado */
+  }
+
+  /* Wrapper ajustado */
+  .wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
