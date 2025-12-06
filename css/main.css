@@ -273,3 +273,33 @@ footer {
     color:#444;
   }
 }
+
+
+/* --- SIDEBAR DE SPOTIFY --- */
+
+#sidebar {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  width: 260px;
+  padding: 10px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+#sidebar h3 {
+  font-size: 16px;
+  margin-top: 0;
+  text-align: center;
+  color: #444;
+  font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
+}
+
+/* Evita que el contenido del texto se esconda bajo el sidebar */
+section {
+  margin-right: 320px; /* espacio para el sidebar */
+}
+
