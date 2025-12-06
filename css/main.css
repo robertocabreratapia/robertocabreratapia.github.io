@@ -8,7 +8,8 @@ body {
 }
 
 h1 {
-  margin: 3.5em 0 1.5em;  /* AJUSTADO PARA EVITAR SUPERPOSICIÓN */
+  margin-top:5em !important;   /* Ajuste para no superponer el menú */
+  margin-bottom:1.5em;
   color:#B01131;
   font-size: 200%;
   font-weight: 300;
@@ -88,27 +89,81 @@ img {
   max-width:100%;
 }
 
-/* LAYOUT IZQUIERDO (MENÚ) */
+/* -------------------------
+   LAYOUT IZQUIERDO (HEADER)
+---------------------------- */
 header {
   width:320px;
   float:left;
   position:fixed;
-  top:40px;  /* AJUSTE PARA QUE NO SE SOLAPE */
+  top:40px;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+header h1{
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+header ul {
+  list-style:none;
+  list-style-position:inside;
+  padding: 0;
+  margin: 0;
+  width:320px;
+}
+
+header li {
+  font-family:  "Century Gothic", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 110%;
+  float:left;
+  display:block;
+  text-align:left;
+  padding: 0;
+  margin: 0 1.5ex 0 0;
+}
+
+header li a {
+  color: #595959;
+}
+
+header li a:hover {
+  color: #B01131;
+}
+
+header li a:active {
+  background-color:#f0f0f0;
+}
+
+header ul li + li + li {
+  border-right:none;
+  width:89px;
+}
+
+header ul a strong {
+  font-size:14px;
+  display:block;
+  color:#222;
+}
+
+/* -------------------------
+   COLUMNA DE CONTENIDO
+---------------------------- */
 section {
   width:500px;
   float:right;
   padding-bottom:50px;
-  margin-right:300px;   /* ESPACIO PARA EL SIDEBAR */
+  /* NO margin-right aquí — mantiene la maqueta original */
 }
 
-/* SIDEBAR SPOTIFY — NUEVO BLOQUE */
+/* -------------------------
+   SIDEBAR A LA DERECHA
+---------------------------- */
 #sidebar {
   position: fixed;
-  top: 120px;
-  right: 20px;
+  top: 180px;       /* baja lo suficiente para no chocar con el menú */
+  right: 40px;      /* evita interferencias con el contenido */
   width: 260px;
   padding: 10px;
   background: #fafafa;
@@ -126,7 +181,9 @@ section {
   font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
 }
 
-/* RESPONSIVE FIXES DEL TEMA ORIGINAL */
+/* -------------------------
+   FOOTER
+---------------------------- */
 small { font-size:11px; }
 
 hr {
@@ -142,4 +199,68 @@ footer {
   position:fixed;
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
+}
+
+/* -------------------------
+   RESPONSIVE DEL TEMA
+---------------------------- */
+@media print, screen and (max-width: 960px) {
+  div.wrapper {
+    width:auto;
+    margin:0;
+  }
+
+  header, section, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+
+  header {
+    padding-right:320px;
+  }
+
+  section {
+    border:1px solid #e5e5e5;
+    border-width:1px 0;
+    padding:20px 0;
+    margin:0 0 20px;
+  }
+
+  header a small {
+    display:inline;
+  }
+
+  header ul {
+    position:absolute;
+    right:50px;
+    top:52px;
+  }
+
+  #sidebar {
+    display:none; /* Sidebar se oculta en pantallas pequeñas */
+  }
+}
+
+@media print, screen and (max-width: 720px) {
+  body { word-wrap:break-word; }
+  header { padding:0; }
+  header ul, header p.view { position:static; }
+  pre, code { word-wrap:normal; }
+}
+
+@media print, screen and (max-width: 480px) {
+  body { padding:15px; }
+  header ul { width:99%; }
+  header li, header ul li + li + li {
+    width:33%;
+  }
+}
+
+@media print {
+  body {
+    padding:0.4in;
+    font-size:12pt;
+    color:#444;
+  }
 }
