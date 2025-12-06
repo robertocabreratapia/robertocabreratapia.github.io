@@ -1,4 +1,13 @@
 /* =========================================================
+   TIPOGRAFÍA GLOBAL
+   ========================================================= */
+
+body, header, section, footer, h1, h2, h3, h4, h5, h6, a, li, p {
+  font-family: "Optima", "Helvetica", "Arial", sans-serif !important;
+}
+
+
+/* =========================================================
    ESTILO GENERAL
    ========================================================= */
 
@@ -6,7 +15,6 @@ body {
   background-color: #fff;
   font-size: 90%;
   line-height: 1.4;
-  font-family: "Optima", "Helvetica", "Arial", sans-serif;
   color:#454545;
   font-weight:300;
 }
@@ -17,18 +25,12 @@ h1 {
   color:#B01131;
   font-size: 200%;
   font-weight: 300;
-  font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
-}
-
-.firstheader {
-  margin-top: 0em;
 }
 
 h2, h3, h4, h5, h6 {
   margin: 1.5em 0 .5em 0;
   font-weight: 300;
   font-size: 150%;
-  font-family:  "Century Gothic", "Helvetica", "Arial", sans-serif;
 }
 
 p {
@@ -66,7 +68,7 @@ blockquote {
 }
 
 code, pre {
-  font-family: Monaco, Consolas, monospace;
+  font-family: Monaco, Consolas, monospace !important;
   color:#333;
 }
 
@@ -119,7 +121,6 @@ header h1{
 }
 
 #menu-desktop li {
-  font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   font-size: 110%;
   float:left;
@@ -187,7 +188,6 @@ footer {
   margin-bottom: 18px;
   color: #333;
   font-size: 120%;
-  font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
 }
 
 .playlistbox p {
@@ -210,7 +210,7 @@ footer {
    ========================================================= */
 
 #hamburger {
-  display: none;  /* solo aparece en móvil */
+  display: none;
   font-size: 34px;
   cursor: pointer;
   text-align: center;
@@ -218,7 +218,7 @@ footer {
 }
 
 #menu-mobile {
-  display: none;  /* oculto hasta abrir */
+  display: none;
 }
 
 #menu-mobile ul {
@@ -242,7 +242,8 @@ footer {
    ========================================================= */
 
 @media print, screen and (max-width: 960px) {
-  div.wrapper {
+
+  .wrapper {
     width:auto;
     margin:0;
   }
@@ -268,7 +269,6 @@ footer {
 
 @media screen and (max-width: 720px) {
 
-  /* Header fluido centrado */
   header {
     position: static !important;
     width: 100% !important;
@@ -277,24 +277,30 @@ footer {
     float: none !important;
   }
 
-  /* Ajuste nombre */
   header h1 {
     margin-top: 20px !important;
     margin-bottom: 10px !important;
     font-size: 180%;
   }
 
-  /* Mostrar hamburguesa */
   #hamburger {
     display: block !important;
   }
 
-  /* Ocultar menú de escritorio */
   #menu-desktop {
     display: none !important;
   }
 
-  /* Contenido fluido */
+  #menu-mobile ul {
+    margin-top: 10px;
+    padding: 0;
+    text-align: center;
+  }
+
+  #menu-mobile ul li {
+    margin: 12px 0;
+  }
+
   section {
     width: 100% !important;
     float: none !important;
@@ -306,7 +312,6 @@ footer {
     margin-top: 1.2em !important;
   }
 
-  /* Playlists compactas en móvil */
   .playlistbox {
     padding: 15px;
     margin: 20px 0;
@@ -316,7 +321,6 @@ footer {
     height: 300px;
   }
 
-  /* Footer móvil */
   footer {
     position: static !important;
     width: 100% !important;
@@ -324,7 +328,6 @@ footer {
     margin-top: 30px;
   }
 
-  /* Ajuste wrapper móvil */
   .wrapper {
     width: 95% !important;
     margin: 0 auto !important;
