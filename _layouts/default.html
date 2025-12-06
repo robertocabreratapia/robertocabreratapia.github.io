@@ -3,29 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>Roberto Cabrera Tapia</title>
+
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- Vista adaptable en móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
+
     <div class="wrapper">
 
+      <!-- =====================================================
+           HEADER / MENÚ IZQUIERDO (según tamaño de pantalla)
+           ===================================================== -->
       <header>
 
         <!-- Nombre -->
-        <h1><a href="/">Roberto Cabrera Tapia</a></h1>
+        <h1>
+          <a href="/">Roberto Cabrera Tapia</a>
+        </h1>
 
-        <!-- Icono hamburguesa (solo visible en móvil) -->
+        <!-- Icono hamburguesa (aparece en móvil + tablet vertical) -->
         <div id="hamburger">&#9776;</div>
 
-        <!-- Menú de escritorio -->
+        <!-- Menú normal (escritorio + tablet horizontal) -->
         <ul id="menu-desktop">
           <li><a href="Publicaciones.html">PUBLICACIONES</a></li>
           <li><a href="Intereses.html">INTERESES</a></li>
           <li><a href="Playlists.html">PLAYLISTS</a></li>
         </ul>
 
-        <!-- Menú móvil oculto por defecto -->
+        <!-- Menú móvil (aparece al pulsar hamburguesa) -->
         <div id="menu-mobile">
           <ul>
             <li><a href="Publicaciones.html">PUBLICACIONES</a></li>
@@ -34,17 +44,23 @@
           </ul>
         </div>
 
+        <br/><br>
       </header>
 
 
-      <!-- CONTENIDO CENTRAL -->
+      <!-- =====================================================
+           CONTENIDO CENTRAL
+           ===================================================== -->
       <section>
         {{ content }}
       </section>
 
 
-      <!-- FOOTER -->
+      <!-- =====================================================
+           PIE DE PÁGINA
+           ===================================================== -->
       <footer>
+
         <p>
           <a href="mailto:robcabre@ucm.es?subject=Website">
             <img src="img/mail.png" alt="Email" height="25">
@@ -69,23 +85,27 @@
             <a href="https://reginaweber.github.io/">Regina Weber</a>.
           </small>
         </p>
+
       </footer>
 
-    </div>
+    </div> <!-- wrapper -->
 
-    <!-- SCRIPT PARA MENÚ HAMBURGUESA -->
+
+    <!-- =====================================================
+         SCRIPT MENÚ HAMBURGUESA
+         ===================================================== -->
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const button = document.getElementById("hamburger");
         const menu   = document.getElementById("menu-mobile");
 
         button.addEventListener("click", function() {
-          menu.style.display =
-            (menu.style.display === "block") ? "none" : "block";
+          menu.style.display = (menu.style.display === "block") ? "none" : "block";
         });
       });
     </script>
 
     <script src="javascripts/sf.js"></script>
+
   </body>
 </html>

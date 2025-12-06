@@ -30,6 +30,7 @@
   font-style: italic;
 }
 
+
 /* =========================================================
    TIPOGRAFÍA EDITORIAL
    ========================================================= */
@@ -90,126 +91,152 @@ img { max-width:100%; }
   margin:0 auto;
 }
 
-/* =========================================================
-   HEADER IZQUIERDO (ESCRITORIO)
-   ========================================================= */
-
-header {
-  width:320px;
-  float:left;
-  position:fixed;
-  top:40px;
-}
-
-header h1 {
-  text-transform:uppercase;
-  letter-spacing:.1em;
-}
-
-/* Menú escritorio */
-#menu-desktop {
-  list-style:none;
-  padding:0;
-  margin:0;
-  width:320px;
-}
-
-#menu-desktop li {
-  font-size:110%;
-  float:left;
-  display:block;
-  text-align:left;
-  margin:0 1.5ex 0 0;
-}
-
-#menu-desktop li a {
-  color:#595959;
-}
-
-#menu-desktop li a:hover {
-  color:#B01131;
-}
 
 /* =========================================================
-   MENÚ HAMBURGUESA (MÓVIL + TABLET VERTICAL)
+   MENÚ ESCRITORIO (≥960 PX)
    ========================================================= */
 
-#hamburger {
-  display:none;
-  font-size:34px;
-  cursor:pointer;
-  text-align:center;
-  margin-top:10px;
-}
+@media screen and (min-width: 960px) {
 
-#menu-mobile {
-  display:none;
-  width:100%;
-  margin-top:10px;
-}
+  header {
+    width:320px;
+    float:left;
+    position:fixed;
+    top:40px;
+  }
 
-#menu-mobile ul {
-  list-style:none;
-  padding:0;
-  margin:0;
-  text-align:center;
-  white-space:nowrap;
-}
+  header h1 {
+    text-transform:uppercase;
+    letter-spacing:.1em;
+  }
 
-#menu-mobile ul li {
-  display:inline-block !important;
-  margin:0 10px;
-  font-size:120%;
-}
+  #menu-desktop {
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:320px;
+  }
 
-#menu-mobile ul li a {
-  text-decoration:none;
-  color:#595959;
-}
+  #menu-desktop li {
+    font-size:110%;
+    float:left;
+    display:block;
+    text-align:left;
+    margin:0 1.5ex 0 0;
+  }
 
-/* =========================================================
-   CONTENIDO CENTRAL
-   ========================================================= */
+  #menu-desktop li a { color:#595959; }
+  #menu-desktop li a:hover { color:#B01131; }
 
-section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
-}
+  /* ocultar hamburguesa */
+  #hamburger { display:none; }
+  #menu-mobile { display:none; }
 
-/* Tablet horizontal → contenido fluido máx 800px */
-@media screen and (min-width: 600px) and (max-width: 959px) and (orientation: landscape) {
+  /* contenido escritorio */
   section {
-    float: none !important;
-    width: auto !important;
-    max-width: 800px !important;
-    margin-left: 340px !important; /* espacio para menú izquierdo */
-    padding: 0 20px !important;
+    width:500px;
+    float:right;
+    padding-bottom:50px;
+  }
+
+  footer {
+    width:320px;
+    float:left;
+    position:fixed;
+    bottom:50px;
   }
 }
 
+
 /* =========================================================
-   FOOTER
+   MÓVIL + TABLET (<960 PX)
    ========================================================= */
 
-footer {
-  width:320px;
-  float:left;
-  position:fixed;
-  bottom:50px;
+@media screen and (max-width: 959px) {
+
+  /* Header centrado, sin menú fijo */
+  header {
+    position: static !important;
+    width: 100% !important;
+    text-align:center;
+    margin-bottom: 10px !important;
+  }
+
+  header h1 {
+    margin-top:20px !important;
+    margin-bottom:10px !important;
+    font-size:180%;
+  }
+
+  /* Menú escritorio oculto */
+  #menu-desktop { display:none !important; }
+
+  /* Mostrar hamburguesa */
+  #hamburger {
+    display:block !important;
+    font-size:34px;
+    cursor:pointer;
+    text-align:center;
+    margin-top:10px;
+  }
+
+  /* Menú móvil */
+  #menu-mobile {
+    display:none;
+    width:100%;
+    margin-top:10px;
+  }
+
+  #menu-mobile ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+    text-align:center;
+    white-space:nowrap;
+  }
+
+  #menu-mobile ul li {
+    display:inline-block !important;
+    margin:0 10px;
+    font-size:120%;
+  }
+
+  #menu-mobile ul li a {
+    text-decoration:none;
+    color:#595959;
+  }
+
+  /* Contenido fluido (máx 800 px) */
+  section {
+    width:100% !important;
+    max-width:800px !important;
+    margin:0 auto !important;
+    float:none !important;
+    padding:0 5% !important;
+  }
+
+  section h1 { margin-top:1.2em !important; }
+
+  /* Playlists compactas */
+  .playlistbox iframe { height:300px; }
+
+  /* Footer centrado */
+  footer {
+    position: static !important;
+    width:100% !important;
+    text-align:center;
+    margin-top:30px;
+  }
+
+  .wrapper {
+    width:95% !important;
+    margin:0 auto !important;
+  }
 }
 
-small { font-size:11px; }
-
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
-}
 
 /* =========================================================
-   TARJETAS PLAYLISTS
+   TARJETAS PLAYLISTS (estándar)
    ========================================================= */
 
 .playlistbox {
@@ -239,89 +266,4 @@ hr {
   height:380px;
   border:none;
   border-radius:12px;
-}
-
-/* =========================================================
-   RESPONSIVE: TABLET GENERAL (600–959px)
-   ========================================================= */
-
-@media screen and (min-width:600px) and (max-width:959px) {
-
-  /* tablet vertical → menú hamburguesa */
-  @media (orientation: portrait) {
-    header {
-      position:static !important;
-      width:100% !important;
-      text-align:center;
-      margin-bottom:10px !important;
-    }
-
-    header h1 {
-      margin-top:20px !important;
-      margin-bottom:10px !important;
-      font-size:180%;
-    }
-
-    #hamburger { display:block !important; }
-    #menu-desktop { display:none !important; }
-
-    section {
-      width:100% !important;
-      float:none !important;
-      padding:0 5% !important;
-      margin-top:0 !important;
-    }
-
-    .playlistbox iframe { height:320px; }
-
-    footer {
-      position:static !important;
-      width:100% !important;
-      text-align:center;
-      margin-top:30px;
-    }
-  }
-}
-
-/* =========================================================
-   RESPONSIVE: MÓVIL (<600px)
-   ========================================================= */
-
-@media screen and (max-width:599px) {
-
-  header {
-    position:static !important;
-    width:100% !important;
-    text-align:center;
-    margin-bottom:10px !important;
-  }
-
-  header h1 {
-    margin-top:20px !important;
-    margin-bottom:10px !important;
-    font-size:170% !important;
-  }
-
-  #hamburger { display:block !important; }
-  #menu-desktop { display:none !important; }
-
-  section {
-    width:100% !important;
-    float:none !important;
-    padding:0 5% !important;
-  }
-
-  .playlistbox iframe { height:300px; }
-
-  footer {
-    position:static !important;
-    width:100% !important;
-    text-align:center;
-    margin-top:30px;
-  }
-
-  .wrapper {
-    width:95% !important;
-    margin:0 auto !important;
-  }
 }
