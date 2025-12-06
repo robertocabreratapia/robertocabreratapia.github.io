@@ -1,90 +1,80 @@
 /* =========================================================
-   FUENTES: LINUX LIBERTINE (OFL)
+   ESTILO GENERAL
    ========================================================= */
 
 @font-face {
   font-family: "Linux Libertine";
-  src: url("/fonts/LinLibertine_R.otf") format("opentype");
+  src: url("../fonts/LinLibertine_R.otf") format("opentype");
   font-weight: 400;
-  font-style: normal;
 }
 
 @font-face {
   font-family: "Linux Libertine";
-  src: url("/fonts/LinLibertine_RI.otf") format("opentype");
-  font-weight: 400;
+  src: url("../fonts/LinLibertine_RI.otf") format("opentype");
   font-style: italic;
 }
 
 @font-face {
   font-family: "Linux Libertine";
-  src: url("/fonts/LinLibertine_RB.otf") format("opentype");
+  src: url("../fonts/LinLibertine_RB.otf") format("opentype");
   font-weight: 700;
-  font-style: normal;
 }
-
-@font-face {
-  font-family: "Linux Libertine";
-  src: url("/fonts/LinLibertine_RBI.otf") format("opentype");
-  font-weight: 700;
-  font-style: italic;
-}
-
-
-/* =========================================================
-   TIPOGRAFÍA EDITORIAL
-   ========================================================= */
 
 body {
-  line-height: 1.6;
-  font-size: 95%;
-  letter-spacing: 0.1px;
-  font-family: "Linux Libertine", Georgia, serif !important;
   background-color: #fff;
+  font-size: 100%;
+  line-height: 1.45;
+  font-family: "Linux Libertine", "Optima", "Helvetica", "Arial", serif;
   color:#454545;
+  font-weight:300;
+  margin:0;
 }
-
-p { margin: 0 0 1.1em; }
 
 h1 {
-  margin-top:4em !important;
-  margin-bottom:0.8em;
+  margin-top: 2.5em !important;
+  margin-bottom: 0.8em;
   color:#B01131;
-  font-size:220%;
-  font-weight:400;
-  letter-spacing:0.5px;
+  font-size: 200%;
+  font-weight: 300;
+  font-family: "Linux Libertine", serif;
 }
 
-h2 {
-  font-size:165%;
-  margin-top:2.2em;
-  margin-bottom:0.6em;
-  color:#222;
+.firstheader {
+  margin-top: 0em;
 }
 
-h3 {
-  font-size:135%;
-  margin-top:1.8em;
-  margin-bottom:0.4em;
+h2, h3, h4, h5, h6 {
+  margin: 1.5em 0 .5em 0;
+  font-weight: 300;
+  font-size: 150%;
+  font-family: "Linux Libertine", serif;
 }
 
-blockquote {
-  font-size:105%;
-  line-height:1.5;
-  padding-left:18px;
-  border-left:3px solid #B01131;
-  margin:1.5em 0;
+p {
+  margin: 0 0 1em;
+}
+
+ul, ol, table, pre, dl {
+  margin: 0 0 .5em;
+  list-style-type: none;
+}
+
+section li {
+  margin: 0 0 .5em -5.5ex;
 }
 
 a {
   color:#B01131;
-  letter-spacing:0.2px;
   text-decoration:none;
 }
 
-a:hover { color:#272727; }
+a:hover {
+  color:#272727;
+}
 
-img { max-width:100%; }
+img {
+  max-width:100%;
+}
 
 .wrapper {
   width:860px;
@@ -93,177 +83,229 @@ img { max-width:100%; }
 
 
 /* =========================================================
-   MENÚ ESCRITORIO (≥960 PX)
+   HEADER IZQUIERDO (ESCRITORIO)
    ========================================================= */
 
-@media screen and (min-width: 960px) {
+header {
+  width:320px;
+  float:left;
+  position:fixed;
+  top:40px;
+  -webkit-font-smoothing:subpixel-antialiased;
+}
 
-  header {
-    width:320px;
-    float:left;
-    position:fixed;
-    top:40px;
-  }
+header h1 {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
 
-  header h1 {
-    text-transform:uppercase;
-    letter-spacing:.1em;
-  }
+/* Menú escritorio */
+#menu-desktop {
+  list-style:none;
+  padding: 0;
+  margin: 0;
+  width:320px;
+}
 
-  #menu-desktop {
-    list-style:none;
-    padding:0;
+#menu-desktop li {
+  font-family: "Linux Libertine", serif;
+  font-weight: 300;
+  font-size: 110%;
+  float:left;
+  display:block;
+  text-align:left;
+  margin: 0 1.5ex 0 0;
+}
+
+#menu-desktop li a {
+  color: #595959;
+}
+
+#menu-desktop li a:hover {
+  color: #B01131;
+}
+
+
+/* =========================================================
+   MENU HAMBURGUESA (MÓVIL + TABLET)
+   ========================================================= */
+
+#hamburger {
+  display: none;
+  font-size: 34px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+#menu-mobile {
+  display: none;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+#menu-mobile ul {
+  list-style: none;
+  padding: 0;
+}
+
+#menu-mobile li {
+  margin: 12px 0;
+  font-size: 120%;
+}
+
+#menu-mobile a {
+  color: #595959;
+}
+
+
+/* =========================================================
+   COLUMNA DE CONTENIDO
+   ========================================================= */
+
+section {
+  width:500px;
+  float:right;
+  padding-bottom:50px;
+}
+
+code, pre {
+  font-family: Monaco, Consolas, monospace;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+small { font-size:11px; }
+
+hr {
+  border:0;
+  background:#e5e5e5;
+  height:1px;
+  margin:0 0 20px;
+}
+
+footer {
+  width:320px;
+  float:left;
+  position:fixed;
+  bottom:50px;
+}
+
+
+/* =========================================================
+   PLAYLISTS: TARJETAS ESTILIZADAS
+   ========================================================= */
+
+.playlistbox {
+  margin: 35px 0;
+  padding: 20px;
+  background: #fcfcfc;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.playlistbox h3 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #333;
+  font-size: 120%;
+  font-family: "Linux Libertine", serif;
+}
+
+.playlistbox p {
+  text-align: center;
+  color: #777;
+  font-size: 90%;
+  margin-top: 8px;
+}
+
+.playlistbox iframe {
+  border: none;
+  width: 100%;
+  height: 380px;
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE GENERAL (<960px)
+   ========================================================= */
+
+@media print, screen and (max-width: 960px) {
+
+  div.wrapper {
+    width:auto;
     margin:0;
-    width:320px;
   }
 
-  #menu-desktop li {
-    font-size:110%;
-    float:left;
-    display:block;
-    text-align:left;
-    margin:0 1.5ex 0 0;
+  header, section, footer {
+    float:none;
+    position:static;
+    width:auto;
   }
 
-  #menu-desktop li a { color:#595959; }
-  #menu-desktop li a:hover { color:#B01131; }
-
-  /* ocultar hamburguesa */
-  #hamburger { display:none; }
-  #menu-mobile { display:none; }
-
-  /* contenido escritorio */
   section {
-    width:500px;
-    float:right;
-    padding-bottom:50px;
-  }
-
-  footer {
-    width:320px;
-    float:left;
-    position:fixed;
-    bottom:50px;
+    border:1px solid #e5e5e5;
+    border-width:1px 0;
+    padding:20px 0;
+    margin:0 0 20px;
   }
 }
 
 
 /* =========================================================
-   MÓVIL + TABLET (<960 PX)
+   MODO MÓVIL + TABLET (<720px)
    ========================================================= */
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 720px) {
 
-  /* Header centrado, sin menú fijo */
   header {
     position: static !important;
     width: 100% !important;
-    text-align:center;
+    text-align: center;
     margin-bottom: 10px !important;
   }
 
   header h1 {
-    margin-top:20px !important;
-    margin-bottom:10px !important;
-    font-size:180%;
+    margin-top: 20px !important;
+    margin-bottom: 8px !important;
+    font-size: 180%;
   }
 
-  /* Menú escritorio oculto */
-  #menu-desktop { display:none !important; }
-
-  /* Mostrar hamburguesa */
   #hamburger {
-    display:block !important;
-    font-size:34px;
-    cursor:pointer;
-    text-align:center;
-    margin-top:10px;
+    display: block !important;
   }
 
-  /* Menú móvil */
-  #menu-mobile {
-    display:none;
-    width:100%;
-    margin-top:10px;
+  #menu-desktop {
+    display: none !important;
   }
 
-  #menu-mobile ul {
-    list-style:none;
-    padding:0;
-    margin:0;
-    text-align:center;
-    white-space:nowrap;
-  }
-
-  #menu-mobile ul li {
-    display:inline-block !important;
-    margin:0 10px;
-    font-size:120%;
-  }
-
-  #menu-mobile ul li a {
-    text-decoration:none;
-    color:#595959;
-  }
-
-  /* Contenido fluido (máx 800 px) */
   section {
-    width:100% !important;
-    max-width:800px !important;
-    margin:0 auto !important;
+    width: 100% !important;
     float:none !important;
-    padding:0 5% !important;
+    padding: 0 3% !important;
   }
 
-  section h1 { margin-top:1.2em !important; }
+  section h1 {
+    margin-top: 1em !important;
+  }
 
-  /* Playlists compactas */
-  .playlistbox iframe { height:300px; }
+  .playlistbox iframe {
+    height: 300px;
+  }
 
-  /* Footer centrado */
   footer {
     position: static !important;
-    width:100% !important;
+    width: 100% !important;
     text-align:center;
-    margin-top:30px;
+    margin-top: 30px;
   }
 
   .wrapper {
-    width:95% !important;
-    margin:0 auto !important;
+    width: 95% !important;
+    margin: 0 auto !important;
   }
-}
-
-
-/* =========================================================
-   TARJETAS PLAYLISTS (estándar)
-   ========================================================= */
-
-.playlistbox {
-  margin:35px 0;
-  padding:20px;
-  background:#fcfcfc;
-  border:1px solid #e2e2e2;
-  border-radius:10px;
-  box-shadow:0 1px 3px rgba(0,0,0,0.08);
-}
-
-.playlistbox h3 {
-  text-align:center;
-  margin-bottom:18px;
-  font-size:120%;
-}
-
-.playlistbox p {
-  text-align:center;
-  color:#777;
-  font-size:90%;
-  margin-top:8px;
-}
-
-.playlistbox iframe {
-  width:100%;
-  height:380px;
-  border:none;
-  border-radius:12px;
 }
