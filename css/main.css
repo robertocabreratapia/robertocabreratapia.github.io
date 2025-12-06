@@ -30,136 +30,65 @@
   font-style: italic;
 }
 
-
 /* =========================================================
-   AJUSTES TIPOGRAFÍA EDITORIAL
+   TIPOGRAFÍA EDITORIAL
    ========================================================= */
 
 body {
   line-height: 1.6;
   font-size: 95%;
   letter-spacing: 0.1px;
+  font-family: "Linux Libertine", Georgia, serif !important;
+  background-color: #fff;
+  color:#454545;
 }
 
-p {
-  margin: 0 0 1.1em;
-}
+p { margin: 0 0 1.1em; }
 
 h1 {
-  font-size: 220%;
-  font-weight: 400;
-  margin-top: 4em !important;
-  margin-bottom: 0.8em;
-  letter-spacing: 0.5px;
+  margin-top:4em !important;
+  margin-bottom:0.8em;
+  color:#B01131;
+  font-size:220%;
+  font-weight:400;
+  letter-spacing:0.5px;
 }
 
 h2 {
-  font-size: 165%;
-  margin-top: 2.2em;
-  margin-bottom: 0.6em;
+  font-size:165%;
+  margin-top:2.2em;
+  margin-bottom:0.6em;
+  color:#222;
 }
 
 h3 {
-  font-size: 135%;
-  margin-top: 1.8em;
-  margin-bottom: 0.4em;
-}
-
-li {
-  margin-bottom: 0.6em;
-}
-
-a {
-  letter-spacing: 0.2px;
+  font-size:135%;
+  margin-top:1.8em;
+  margin-bottom:0.4em;
 }
 
 blockquote {
-  font-size: 105%;
-  line-height: 1.5;
-  padding-left: 18px;
-  border-left: 3px solid #B01131;
-  margin: 1.5em 0;
-}
-
-
-
-
-/* =========================================================
-   ESTILO GENERAL
-   ========================================================= */
-
-body {
-  background-color: #fff;
-  font-size: 90%;
-  line-height: 1.4;
-  font-family: "Linux Libertine", Georgia, serif !important;
-  color:#454545;
-  font-weight:300;
-}
-
-h1 {
-  margin-top:5em !important;
-  margin-bottom:1.5em;
-  color:#B01131;
-  font-size:200%;
-  font-weight:400;
-  font-family:"Linux Libertine", Georgia, serif !important;
-}
-
-h2, h3, h4, h5, h6 {
-  margin:1.5em 0 .5em 0;
-  font-weight:400;
-  font-size:150%;
-  font-family:"Linux Libertine", Georgia, serif !important;
-}
-
-p, li, small, a {
-  font-family:"Linux Libertine", Georgia, serif !important;
+  font-size:105%;
+  line-height:1.5;
+  padding-left:18px;
+  border-left:3px solid #B01131;
+  margin:1.5em 0;
 }
 
 a {
   color:#B01131;
+  letter-spacing:0.2px;
   text-decoration:none;
 }
 
 a:hover { color:#272727; }
 
+img { max-width:100%; }
+
 .wrapper {
   width:860px;
   margin:0 auto;
 }
-
-blockquote {
-  border-left:1px solid #636363;
-  padding:0 0 0 20px;
-  font-style:italic;
-}
-
-code, pre {
-  font-family:Consolas, monospace;
-  color:#333;
-}
-
-pre {
-  padding:8px 15px;
-  background:#f8f8f8;
-  border-radius:5px;
-  border:1px solid #e5e5e5;
-  overflow-x:auto;
-}
-
-table {
-  width:100%;
-  border-collapse:collapse;
-}
-
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
-}
-
-img { max-width:100%; }
 
 /* =========================================================
    HEADER IZQUIERDO (ESCRITORIO)
@@ -202,7 +131,7 @@ header h1 {
 }
 
 /* =========================================================
-   MENÚ HAMBURGUESA (MÓVIL)
+   MENÚ HAMBURGUESA (MÓVIL + TABLET VERTICAL)
    ========================================================= */
 
 #hamburger {
@@ -224,7 +153,7 @@ header h1 {
   padding:0;
   margin:0;
   text-align:center;
-  white-space:nowrap;       /* evita salto */
+  white-space:nowrap;
 }
 
 #menu-mobile ul li {
@@ -239,13 +168,24 @@ header h1 {
 }
 
 /* =========================================================
-   COLUMNA DE CONTENIDO
+   CONTENIDO CENTRAL
    ========================================================= */
 
 section {
   width:500px;
   float:right;
   padding-bottom:50px;
+}
+
+/* Tablet horizontal → contenido fluido máx 800px */
+@media screen and (min-width: 600px) and (max-width: 959px) and (orientation: landscape) {
+  section {
+    float: none !important;
+    width: auto !important;
+    max-width: 800px !important;
+    margin-left: 340px !important; /* espacio para menú izquierdo */
+    padding: 0 20px !important;
+  }
 }
 
 /* =========================================================
@@ -302,34 +242,52 @@ hr {
 }
 
 /* =========================================================
-   RESPONSIVE <960px
+   RESPONSIVE: TABLET GENERAL (600–959px)
    ========================================================= */
 
-@media screen and (max-width:960px) {
-  div.wrapper {
-    width:auto;
-    margin:0;
-  }
+@media screen and (min-width:600px) and (max-width:959px) {
 
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
+  /* tablet vertical → menú hamburguesa */
+  @media (orientation: portrait) {
+    header {
+      position:static !important;
+      width:100% !important;
+      text-align:center;
+      margin-bottom:10px !important;
+    }
 
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
+    header h1 {
+      margin-top:20px !important;
+      margin-bottom:10px !important;
+      font-size:180%;
+    }
+
+    #hamburger { display:block !important; }
+    #menu-desktop { display:none !important; }
+
+    section {
+      width:100% !important;
+      float:none !important;
+      padding:0 5% !important;
+      margin-top:0 !important;
+    }
+
+    .playlistbox iframe { height:320px; }
+
+    footer {
+      position:static !important;
+      width:100% !important;
+      text-align:center;
+      margin-top:30px;
+    }
   }
 }
 
 /* =========================================================
-   MODO MÓVIL (<720px)
+   RESPONSIVE: MÓVIL (<600px)
    ========================================================= */
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:599px) {
 
   header {
     position:static !important;
@@ -341,28 +299,18 @@ hr {
   header h1 {
     margin-top:20px !important;
     margin-bottom:10px !important;
-    font-size:180%;
+    font-size:170% !important;
   }
 
-  /* mostrar hamburguesa */
   #hamburger { display:block !important; }
-
-  /* ocultar menú escritorio */
   #menu-desktop { display:none !important; }
 
-  /* contenido fluido */
   section {
     width:100% !important;
     float:none !important;
     padding:0 5% !important;
-    margin-top:0 !important;
   }
 
-  section h1 {
-    margin-top:1.2em !important;
-  }
-
-  /* playlists más compactas */
   .playlistbox iframe { height:300px; }
 
   footer {
