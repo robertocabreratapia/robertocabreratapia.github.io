@@ -264,3 +264,13 @@ footer {
     color:#444;
   }
 }
+
+
+/* Oculta el sidebar cuando la ventana es demasiado estrecha
+   para mantener las tres columnas sin superposición */
+@media screen and (max-width: 1200px) {
+  #sidebar {
+    display: none;
+  }
+}
+
