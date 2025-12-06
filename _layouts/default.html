@@ -4,28 +4,46 @@
     <meta charset="utf-8">
     <title>Roberto Cabrera Tapia</title>
     <link rel="stylesheet" href="css/main.css">
-    <!-- <meta name="viewport" content="width=device-width"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
     <div class="wrapper">
 
       <header>
+        <!-- Nombre -->
         <h1><a href="/">Roberto Cabrera Tapia</a></h1>
 
-        <ul>
+        <!-- Icono hamburguesa (solo visible en móvil) -->
+        <div id="hamburger">&#9776;</div>
+
+        <!-- Menú normal (escritorio) -->
+        <ul id="menu-desktop">
           <li><a href="Publicaciones.html">PUBLICACIONES</a></li>
           <li><a href="Intereses.html">INTERESES</a></li>
           <li><a href="Playlists.html">PLAYLISTS</a></li>
         </ul>
 
+        <!-- Menú móvil oculto por defecto -->
+        <div id="menu-mobile">
+          <ul>
+            <li><a href="Publicaciones.html">PUBLICACIONES</a></li>
+            <li><a href="Intereses.html">INTERESES</a></li>
+            <li><a href="Playlists.html">PLAYLISTS</a></li>
+          </ul>
+        </div>
+
         <br/><br>
       </header>
 
+
+      <!-- CONTENIDO CENTRAL -->
       <section>
         {{ content }}
       </section>
 
+
+      <!-- FOOTER -->
       <footer>
         <p>
           <a href="mailto:robcabre@ucm.es?subject=Website">
@@ -54,6 +72,18 @@
       </footer>
 
     </div>
+
+    <!-- SCRIPT PARA ACTIVAR EL MENÚ HAMBURGUESA -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const button = document.getElementById("hamburger");
+        const menu   = document.getElementById("menu-mobile");
+
+        button.addEventListener("click", function() {
+          menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        });
+      });
+    </script>
 
     <script src="javascripts/sf.js"></script>
   </body>
