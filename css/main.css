@@ -1,3 +1,7 @@
+/* =========================================================
+   ESTILO GENERAL
+   ========================================================= */
+
 body {
   background-color: #fff;
   font-size: 90%;
@@ -8,7 +12,7 @@ body {
 }
 
 h1 {
-  margin-top:5em !important;   /* Ajuste para no superponer el menú */
+  margin-top:5em !important;
   margin-bottom:1.5em;
   color:#B01131;
   font-size: 200%;
@@ -89,9 +93,11 @@ img {
   max-width:100%;
 }
 
-/* -------------------------
-   LAYOUT IZQUIERDO (HEADER)
----------------------------- */
+
+/* =========================================================
+   HEADER IZQUIERDO (ESCRITORIO)
+   ========================================================= */
+
 header {
   width:320px;
   float:left;
@@ -107,20 +113,18 @@ header h1{
 
 header ul {
   list-style:none;
-  list-style-position:inside;
   padding: 0;
   margin: 0;
   width:320px;
 }
 
 header li {
-  font-family:  "Century Gothic", "Helvetica", "Arial", sans-serif;
+  font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   font-size: 110%;
   float:left;
   display:block;
   text-align:left;
-  padding: 0;
   margin: 0 1.5ex 0 0;
 }
 
@@ -132,33 +136,22 @@ header li a:hover {
   color: #B01131;
 }
 
-header li a:active {
-  background-color:#f0f0f0;
-}
 
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-header ul a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
-}
-
-/* -------------------------
+/* =========================================================
    COLUMNA DE CONTENIDO
----------------------------- */
+   ========================================================= */
+
 section {
   width:500px;
   float:right;
   padding-bottom:50px;
 }
 
-/* -------------------------
+
+/* =========================================================
    FOOTER
----------------------------- */
+   ========================================================= */
+
 small { font-size:11px; }
 
 hr {
@@ -173,89 +166,12 @@ footer {
   float:left;
   position:fixed;
   bottom:50px;
-  -webkit-font-smoothing:subpixel-antialiased;
-}
-
-/* -------------------------
-   RESPONSIVE DEL TEMA
----------------------------- */
-@media print, screen and (max-width: 960px) {
-  div.wrapper {
-    width:auto;
-    margin:0;
-  }
-
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
-
-  header {
-    padding-right:320px;
-  }
-
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
-
-  header a small {
-    display:inline;
-  }
-
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
-}
-
-@media print, screen and (max-width: 720px) {
-  body { word-wrap:break-word; }
-  header { padding:0; }
-  header ul, header p.view { position:static; }
-  pre, code { word-wrap:normal; }
-}
-
-@media print, screen and (max-width: 480px) {
-  body { padding:15px; }
-  header ul { width:99%; }
-  header li, header ul li + li + li {
-    width:33%;
-  }
-}
-
-@media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
-  }
-}
-#playlistbox {
-  margin-top: 25px;
-  padding: 15px;
-  background: #fafafa;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-#playlistbox h3 {
-  text-align: center;
-  margin-bottom: 15px;
-  color: #444;
-  font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
-}
-
-#playlistbox iframe {
-  margin-bottom: 10px;
 }
 
 
-/* ====== PLAYLISTS: DISEÑO MEJORADO ====== */
+/* =========================================================
+   PLAYLISTS: TARJETAS ESTILIZADAS
+   ========================================================= */
 
 .playlistbox {
   margin: 35px 0;
@@ -289,44 +205,96 @@ footer {
 }
 
 
-/* ====== PLAYLISTS: MODO MÓVIL ====== */
+/* =========================================================
+   RESPONSIVE GENERAL DE TEMA
+   ========================================================= */
+
+@media print, screen and (max-width: 960px) {
+  div.wrapper {
+    width:auto;
+    margin:0;
+  }
+
+  header, section, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+
+  section {
+    border:1px solid #e5e5e5;
+    border-width:1px 0;
+    padding:20px 0;
+    margin:0 0 20px;
+  }
+}
+
+
+/* =========================================================
+   MODO MÓVIL (<720px)
+   MENÚ DEBAJO DEL NOMBRE
+   ========================================================= */
 
 @media screen and (max-width: 720px) {
 
-  /* Header fluido */
+  /* Header fluido y centrado */
   header {
     position: static;
     width: 100%;
     text-align: center;
+    margin-bottom: 20px;
   }
 
+  header h1 {
+    margin-top: 20px !important;
+    margin-bottom: 10px;
+    font-size: 180%;
+  }
+
+  /* Menú vertical debajo del nombre */
   header ul {
-    text-align: center;
     width: 100%;
     margin-top: 10px;
+    padding: 0;
+    text-align: center;
   }
 
-  header li {
-    float: none;
+  header ul li {
+    float: none !important;
+    display: block !important;
+    margin: 12px 0;
+    font-size: 120%;
+  }
+
+  header ul li a {
+    padding: 6px 0;
     display: inline-block;
-    margin: 0 10px;
   }
 
-  /* Contenido ocupa <100%> */
+  /* Contenido fluido */
   section {
     width: 100% !important;
     float: none;
     padding: 0 5%;
+    margin-top: 20px;
   }
 
-  /* Playlists responsivas */
+  /* Playlists más compactas */
   .playlistbox {
     padding: 15px;
     margin: 20px 0;
   }
 
   .playlistbox iframe {
-    height: 300px; /* tamaño mejor adaptado */
+    height: 300px;
+  }
+
+  /* Footer fluido */
+  footer {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
   }
 
   /* Wrapper ajustado */
@@ -335,4 +303,3 @@ footer {
     margin: 0 auto;
   }
 }
-
