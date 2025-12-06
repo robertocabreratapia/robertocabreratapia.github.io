@@ -11,13 +11,14 @@
     <div class="wrapper">
 
       <header>
+
         <!-- Nombre -->
         <h1><a href="/">Roberto Cabrera Tapia</a></h1>
 
         <!-- Icono hamburguesa (solo visible en móvil) -->
         <div id="hamburger">&#9776;</div>
 
-        <!-- Menú normal (escritorio) -->
+        <!-- Menú de escritorio -->
         <ul id="menu-desktop">
           <li><a href="Publicaciones.html">PUBLICACIONES</a></li>
           <li><a href="Intereses.html">INTERESES</a></li>
@@ -33,7 +34,6 @@
           </ul>
         </div>
 
-        <br/><br>
       </header>
 
 
@@ -73,14 +73,15 @@
 
     </div>
 
-    <!-- SCRIPT PARA ACTIVAR EL MENÚ HAMBURGUESA -->
+    <!-- SCRIPT PARA MENÚ HAMBURGUESA -->
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const button = document.getElementById("hamburger");
         const menu   = document.getElementById("menu-mobile");
 
         button.addEventListener("click", function() {
-          menu.style.display = (menu.style.display === "block") ? "none" : "block";
+          menu.style.display =
+            (menu.style.display === "block") ? "none" : "block";
         });
       });
     </script>
