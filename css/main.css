@@ -24,7 +24,7 @@ h2, h3, h4, h5, h6 {
   margin: 1.5em 0 .5em 0;
   font-weight: 300;
   font-size: 150%;
-  font-family:  "Century Gothic", "Helvetica", "Arial", sans-serif;
+  font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
 }
 
 p {
@@ -154,31 +154,6 @@ section {
   width:500px;
   float:right;
   padding-bottom:50px;
-  /* NO margin-right aquí — mantiene la maqueta original */
-}
-
-/* -------------------------
-   SIDEBAR A LA DERECHA
----------------------------- */
-#sidebar {
-  position: fixed;
-  top: 180px;       /* baja lo suficiente para no chocar con el menú */
-  right: 40px;      /* evita interferencias con el contenido */
-  width: 260px;
-  padding: 10px;
-  background: #fafafa;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.15);
-  z-index: 999;
-}
-
-#sidebar h3 {
-  font-size: 16px;
-  margin-top: 0;
-  text-align: center;
-  color: #444;
-  font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
 }
 
 /* -------------------------
@@ -236,10 +211,6 @@ footer {
     right:50px;
     top:52px;
   }
-
-  #sidebar {
-    display:none; /* Sidebar se oculta en pantallas pequeñas */
-  }
 }
 
 @media print, screen and (max-width: 720px) {
@@ -264,13 +235,21 @@ footer {
     color:#444;
   }
 }
-
-
-/* Oculta el sidebar cuando la ventana es demasiado estrecha
-   para mantener las tres columnas sin superposición */
-@media screen and (max-width: 1200px) {
-  #sidebar {
-    display: none;
-  }
+#playlistbox {
+  margin-top: 25px;
+  padding: 15px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
+#playlistbox h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #444;
+  font-family: "Century Gothic", "Helvetica", "Arial", sans-serif;
+}
+
+#playlistbox iframe {
+  margin-bottom: 10px;
+}
