@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>Roberto Cabrera Tapia</title>
 
-    <!-- Hoja de estilos principal -->
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- Vista adaptable en móviles -->
+    <!-- Escala correcta en móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
@@ -16,8 +16,8 @@
     <div class="wrapper">
 
       <!-- =====================================================
-           HEADER / MENÚ IZQUIERDO (según tamaño de pantalla)
-           ===================================================== -->
+           HEADER
+      ===================================================== -->
       <header>
 
         <!-- Nombre -->
@@ -25,32 +25,31 @@
           <a href="/">Roberto Cabrera Tapia</a>
         </h1>
 
-        <!-- Icono hamburguesa (aparece en móvil + tablet vertical) -->
+        <!-- Icono menú hamburguesa (solo móvil/tablet) -->
         <div id="hamburger">&#9776;</div>
 
-        <!-- Menú normal (escritorio + tablet horizontal) -->
+        <!-- Menú escritorio -->
         <ul id="menu-desktop">
           <li><a href="Publicaciones.html">PUBLICACIONES</a></li>
           <li><a href="Intereses.html">INTERESES</a></li>
           <li><a href="Playlists.html">PLAYLISTS</a></li>
         </ul>
 
-        <!-- Menú móvil (aparece al pulsar hamburguesa) -->
-        <div id="menu-mobile">
+        <!-- Menú móvil -->
+        <nav id="menu-mobile">
           <ul>
             <li><a href="Publicaciones.html">PUBLICACIONES</a></li>
             <li><a href="Intereses.html">INTERESES</a></li>
             <li><a href="Playlists.html">PLAYLISTS</a></li>
           </ul>
-        </div>
+        </nav>
 
-        <br/><br>
       </header>
 
 
       <!-- =====================================================
            CONTENIDO CENTRAL
-           ===================================================== -->
+      ===================================================== -->
       <section>
         {{ content }}
       </section>
@@ -58,7 +57,7 @@
 
       <!-- =====================================================
            PIE DE PÁGINA
-           ===================================================== -->
+      ===================================================== -->
       <footer>
 
         <p>
@@ -93,7 +92,7 @@
 
     <!-- =====================================================
          SCRIPT MENÚ HAMBURGUESA
-         ===================================================== -->
+    ===================================================== -->
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const button = document.getElementById("hamburger");
